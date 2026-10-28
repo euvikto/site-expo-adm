@@ -144,7 +144,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       <div className="absolute bottom-16 inset-x-0 text-center text-white px-6 fade-up">
         <p className="text-[11px] tracking-[0.35em] uppercase mb-4">Primavera-Verão 2026</p>
-        <h1 className="font-serif text-5xl md:text-7xl">ARTMIS Ancora</h1>
+        <h1 className="font-serif text-5xl md:text-7xl">ARTMIS</h1>
         <p className="mt-4 max-w-md mx-auto text-sm text-white/80">Elegância que nasce do cuidado. Conheça a proposta ARTMIS de moda consciente, inspirada na natureza e feita para durar.</p>
         <a href="#loja" className="inline-block mt-8 bg-white text-black px-10 py-4 text-[11px] tracking-[0.25em] uppercase hover:bg-ancora hover:text-white transition-colors duration-500">Descubra Agora</a>
       </div>
@@ -159,7 +159,7 @@ function Hero() {
 function Split({ onCat }: { onCat: (c: string) => void }) {
   const tiles = [
     { img: IMG.women, t: "Mulher", s: "Novas silhuetas da temporada", c: "Mulher" },
-    { img: IMG.men, t: "Homem", s: "Alfaiataria reinventada", c: "Homem" },
+    { img: IMG.men, t: "Homem", s: "Artesanato reinventado", c: "Homem" },
   ];
   return (
     <section className="grid md:grid-cols-2">

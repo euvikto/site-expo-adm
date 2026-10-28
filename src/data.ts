@@ -15,8 +15,8 @@ export type Product = {
 export const IMG = {
   heroVideo: "/midia/videos/artmis-modelo.mp4",
   heroPoster: "/midia/imagens/artmis-modelo-capa.jpg",
-  women: px(34769660, 1000, 1400),
-  men: px(26903318, 1000, 1400),
+  women: "/midia/imagens/artmis-mulher.png",
+  men: "/midia/imagens/artmis-homem.png",
   runway1: px(31648380, 1800, 1000),
   runway2: px(5185592, 1800, 1000),
   bags: px(34121562, 1000, 1400),
