@@ -17,7 +17,7 @@ export const IMG = {
   heroPoster: "/midia/imagens/artmis-modelo-capa.jpg",
   women: "/midia/imagens/artmis-mulher.png",
   men: "/midia/imagens/artmis-homem.png",
-  runway1: px(31648380, 1800, 1000),
+  runway1: "/midia/imagens/artmis-desfile.png",
   runway2: px(5185592, 1800, 1000),
   bags: px(34121562, 1000, 1400),
   story: px(14738813, 1000, 1400),
@@ -79,13 +79,13 @@ export const products: Product[] = [
   },
   {
     "id": 6,
-    "name": "Lustre Cascata de Lacres",
+    "name": "Organizador de Parede em Jeans",
     "category": "Decoração",
     "price": 389,
-    "img": "/midia/imagens/produtos/lustre-lacres.png",
-    "img2": "/midia/imagens/produtos/lustre-lacres.png",
+    "img": "/midia/imagens/produtos/organizador-jeans.png",
+    "img2": "/midia/imagens/produtos/organizador-jeans.png",
     "tag": "Novo",
-    "desc": "Lustre decorativo em formato de cascata, com fileiras de lacres metálicos e estrutura suspensa. Lâmpada não inclusa."
+    "desc": "Organizador de parede com bolso de jeans e moldura de madeira, para guardar pequenos objetos e apoiar óculos. Chaves, óculos e demais acessórios da foto não inclusos."
   },
   {
     "id": 7,

@@ -255,12 +255,12 @@ function Runway() {
   }, []);
   return (
     <section ref={ref} className="relative h-[90vh] overflow-hidden bg-ancora text-white">
-      <img src={IMG.runway1} className="absolute inset-0 w-full h-[130%] object-cover opacity-60 mix-blend-luminosity" style={{ transform: `translateY(${y}px)` }} />
+      <img src={IMG.runway1} alt="Desfile ARTMIS: modelo com vestido verde de trama entrelaçada" className="absolute inset-0 w-full h-[130%] object-cover opacity-60 mix-blend-luminosity" style={{ transform: `translateY(${y}px)` }} />
       <div className="absolute inset-0 bg-gradient-to-t from-ancora-dark via-ancora/40 to-transparent" />
       <div className="relative h-full flex flex-col items-center justify-center text-center px-6 reveal">
         <p className="text-[11px] tracking-[0.35em] uppercase">Desfile</p>
-        <h2 className="font-serif text-5xl md:text-8xl mt-4">Rosso ARTMIS</h2>
-        <p className="max-w-lg mt-6 text-white/80">O vermelho profundo que marca uma nova era. Assista ao desfile Primavera-Verão 2026 apresentado em Milão.</p>
+        <h2 className="font-serif text-5xl md:text-8xl mt-4">ARTMIS</h2>
+        <p className="max-w-lg mt-6 text-white/80">Assista ao desfile Primavera-Verão 2026 apresentado em Copacabana.</p>
         <a href="#lookbook" className="mt-10 border border-white px-10 py-4 text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-ancora transition-colors duration-500">Ver os Looks</a>
       </div>
     </section>
@@ -308,7 +308,7 @@ function Editorial({ onCat }: { onCat: (c: string) => void }) {
   return (
     <section className="grid md:grid-cols-3 gap-4 px-5 md:px-10 pb-24">
       {[
-        { img: "/midia/imagens/produtos/lustre-lacres.png", t: "Decoração Criativa", c: "Decoração" },
+        { img: "/midia/imagens/produtos/organizador-jeans.png", t: "Decoração Criativa", c: "Decoração" },
         { img: "/midia/imagens/produtos/corselet-jeans.png", t: "Moda Reinventada", c: "Mulher" },
         { img: "/midia/imagens/produtos/regata-verde.png", t: "Tramas & Texturas", c: "Homem" },
       ].map((e, i) => (
