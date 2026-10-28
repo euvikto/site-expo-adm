@@ -65,7 +65,7 @@ function Header({ scrolled, cartCount, onMenu, onSearch, onCart }: { scrolled: b
 
 /* ---------- Menu overlay ---------- */
 function MenuOverlay({ open, onClose, onCat }: { open: boolean; onClose: () => void; onCat: (c: string) => void }) {
-  const items = ["Novidades", "Mulher", "Homem", "Bolsas", "Joias & Relógios", "Presentes", "Desfiles", "ARTMIS Ancora"];
+  const items = ["Novidades", "Mulher", "Homem", "Bolsas", "Decoração", "Joias & Relógios", "Presentes", "Desfiles", "ARTMIS Ancora"];
   return (
     <div className={`fixed inset-0 z-50 transition ${open ? "visible" : "invisible"}`}>
       <div onClick={onClose} className={`absolute inset-0 bg-black/40 transition-opacity duration-500 ${open ? "opacity-100" : "opacity-0"}`} />
@@ -199,7 +199,7 @@ function Card({ p, liked, onLike, onOpen }: { p: Product; liked: boolean; onLike
 
 /* ---------- Shop ---------- */
 function Shop({ cat, setCat, liked, toggleLike, open }: { cat: string; setCat: (c: string) => void; liked: number[]; toggleLike: (id: number) => void; open: (p: Product) => void }) {
-  const cats = ["Todos", "Mulher", "Homem", "Bolsas", "Favoritos"];
+  const cats = ["Todos", "Mulher", "Homem", "Bolsas", "Decoração", "Favoritos"];
   const [sort, setSort] = useState("destaque");
   const list = useMemo(() => {
     let l = cat === "Todos" ? products : cat === "Favoritos" ? products.filter((p) => liked.includes(p.id)) : products.filter((p) => p.category === cat);
@@ -212,6 +212,7 @@ function Shop({ cat, setCat, liked, toggleLike, open }: { cat: string; setCat: (
       <div className="text-center reveal">
         <p className="text-[11px] tracking-[0.35em] uppercase text-neutral-500">A Coleção</p>
         <h2 className="font-serif text-4xl md:text-6xl mt-3">Novidades ARTMIS</h2>
+        <p className="mt-3 text-xs text-neutral-500">Coleção conceitual · Preços fictícios para o projeto escolar.</p>
       </div>
       <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 border-y border-neutral-200 py-4">
         <div className="flex gap-6 overflow-x-auto no-scrollbar">
@@ -285,7 +286,7 @@ function Lookbook({ open }: { open: (p: Product) => void }) {
         </div>
       </div>
       <div ref={ref} onScroll={onScroll} className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory px-5 md:px-10">
-        {products.filter((p) => p.category !== "Bolsas").map((p, i) => (
+        {products.filter((p) => p.category === "Mulher" || p.category === "Homem").map((p, i) => (
           <button key={p.id} onClick={() => open(p)} className="snap-start shrink-0 w-[70vw] sm:w-[40vw] lg:w-[26vw] text-left group">
             <div className="aspect-[3/4] overflow-hidden relative">
               <img src={p.img} className="w-full h-full object-cover group-hover:scale-105 transition duration-1000" />
@@ -392,8 +393,8 @@ function QuickView({ p, onClose, onAdd, liked, onLike }: { p: Product | null; on
   const [err, setErr] = useState(false);
   useEffect(() => { setSize(""); setImgIdx(0); setErr(false); }, [p]);
   if (!p) return null;
-  const sizes = p.category === "Bolsas" ? ["Único"] : ["PP", "P", "M", "G", "GG"];
-  const imgs = [p.img, p.img2];
+  const sizes = (p.category === "Bolsas" || p.category === "Decoração") ? ["Único"] : ["PP", "P", "M", "G", "GG"];
+  const imgs = Array.from(new Set([p.img, p.img2]));
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-0 md:p-8">
       <div onClick={onClose} className="absolute inset-0 bg-black/50 backdrop-blur-sm fade-up" style={{ animationDuration: ".4s" }} />
@@ -401,9 +402,9 @@ function QuickView({ p, onClose, onAdd, liked, onLike }: { p: Product | null; on
         <button onClick={onClose} className="absolute top-4 right-4 z-10 bg-white rounded-full p-1 hover:rotate-90 transition">{I.close}</button>
         <div className="relative bg-[#f5f5f3] aspect-[3/4] md:aspect-auto">
           {imgs.map((src, i) => (
-            <img key={i} src={src} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${imgIdx === i ? "opacity-100" : "opacity-0"}`} />
+            <img key={i} src={src} alt={p.name} className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${imgIdx === i ? "opacity-100" : "opacity-0"}`} />
           ))}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className={`absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 ${imgs.length === 1 ? "hidden" : ""}`}>
             {imgs.map((_, i) => <button key={i} onClick={() => setImgIdx(i)} className={`h-[2px] transition-all ${imgIdx === i ? "w-10 bg-black" : "w-5 bg-black/30"}`} />)}
           </div>
         </div>
@@ -567,7 +568,7 @@ export default function App() {
   useEffect(() => { if (!toast) return; const t = setTimeout(() => setToast(""), 2500); return () => clearTimeout(t); }, [toast]);
 
   const goCat = (c: string) => {
-    const map: Record<string, string> = { Mulher: "Mulher", Homem: "Homem", Bolsas: "Bolsas" };
+    const map: Record<string, string> = { Mulher: "Mulher", Homem: "Homem", Bolsas: "Bolsas", Decoração: "Decoração" };
     setCat(map[c] || "Todos");
     setTimeout(() => document.getElementById("loja")?.scrollIntoView({ behavior: "smooth" }), 50);
   };

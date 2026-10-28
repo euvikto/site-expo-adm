@@ -4,7 +4,7 @@ const px = (id: number, w = 800, h = 1200) =>
 export type Product = {
   id: number;
   name: string;
-  category: "Mulher" | "Homem" | "Bolsas";
+  category: "Mulher" | "Homem" | "Bolsas" | "Decoração";
   price: number;
   img: string;
   img2: string;
@@ -25,19 +25,128 @@ export const IMG = {
   menB: px(4651334, 1000, 1400),
 };
 
+// Catálogo fictício: preços ilustrativos em reais para o projeto escolar.
 export const products: Product[] = [
-  { id: 1, name: "Vestido Envelope em Cetim", category: "Mulher", price: 18900, img: px(34769660), img2: px(17238334), tag: "Novo", desc: "Cetim de seda italiana com amarração lateral e caimento fluido. Feito à mão em Milão." },
-  { id: 2, name: "Casaco Pelo Sintético Ancora", category: "Mulher", price: 32500, img: px(10356436), img2: px(21338240), tag: "Exclusivo", desc: "Casaco oversized em pelo sintético premium, forro em seda bordô ARTMIS." },
-  { id: 3, name: "Vestido Noir com Luvas", category: "Mulher", price: 21400, img: px(9690414), img2: px(10147909), desc: "Silhueta escultural em crepe preto acompanhada de luvas longas em couro." },
-  { id: 4, name: "Blazer Estruturado Camel", category: "Homem", price: 16800, img: px(3095442), img2: px(26903333), tag: "Novo", desc: "Lã virgem com ombros estruturados e botões em metal dourado gravado." },
-  { id: 5, name: "Terno Noir Slim", category: "Homem", price: 24900, img: px(26903318), img2: px(13080473), desc: "Terno de alfaiataria em lã fria, corte slim e lapela de cetim." },
-  { id: 6, name: "Conjunto Alfaiataria Duo", category: "Homem", price: 27300, img: px(4651334), img2: px(4651381), tag: "Desfile", desc: "Peça apresentada no desfile ARTMIS Primavera-Verão 2026." },
-  { id: 7, name: "Bolsa ARTMIS Tote Marrom", category: "Bolsas", price: 19800, img: px(27174573, 800, 1000), img2: px(27174572, 800, 1000), tag: "Ícone", desc: "Couro granulado com alças em lona bege e fecho com o monograma ARTMIS." },
-  { id: 8, name: "Bolsa Croco Mini", category: "Bolsas", price: 14200, img: px(27174572, 800, 1000), img2: px(27174573, 800, 1000), desc: "Couro com textura croco, alça de corrente removível." },
-  { id: 9, name: "Bolsa Shoulder Verde", category: "Bolsas", price: 15600, img: px(27174571, 800, 1000), img2: px(27174565, 800, 1000), tag: "Novo", desc: "Alça transversal ajustável, interior em camurça." },
-  { id: 10, name: "Bolsa Bicolor Textura", category: "Bolsas", price: 17100, img: px(27174565, 800, 1000), img2: px(27174571, 800, 1000), desc: "Bicolor branco e marrom em couro texturizado." },
-  { id: 11, name: "Look Listrado Monocromo", category: "Mulher", price: 12900, img: px(17238334), img2: px(34769660), desc: "Conjunto em algodão listrado com recortes geométricos." },
-  { id: 12, name: "Casaco Urbano Gelo", category: "Mulher", price: 29900, img: px(34121562), img2: px(38290951), desc: "Casaco longo com gola ampla e cinto. Acompanha bolsa em couro." },
+  {
+    "id": 1,
+    "name": "Vestido Escultural de Jornal",
+    "category": "Mulher",
+    "price": 890,
+    "img": "/midia/imagens/produtos/vestido-jornal.png",
+    "img2": "/midia/imagens/produtos/vestido-jornal.png",
+    "tag": "Conceito",
+    "desc": "Criação conceitual com recortes de jornal, volumes assimétricos e saia longa com cauda. Uma proposta de moda artística inspirada no reaproveitamento."
+  },
+  {
+    "id": 2,
+    "name": "Saia de Retalhos com Laço",
+    "category": "Mulher",
+    "price": 249,
+    "img": "/midia/imagens/produtos/saia-retalhos.png",
+    "img2": "/midia/imagens/produtos/saia-retalhos.png",
+    "tag": "Novo",
+    "desc": "Saia curta com sobreposição de retalhos e rendas em tons suaves, finalizada por um laço acetinado na cintura."
+  },
+  {
+    "id": 3,
+    "name": "Corselet Jeans com Flores",
+    "category": "Mulher",
+    "price": 329,
+    "img": "/midia/imagens/produtos/corselet-jeans.png",
+    "img2": "/midia/imagens/produtos/corselet-jeans.png",
+    "tag": "Destaque",
+    "desc": "Corselet tomara que caia em patchwork de jeans, com barra em ponta e aplicações florais em diferentes tons de azul."
+  },
+  {
+    "id": 4,
+    "name": "Colete de Tampinhas Coloridas",
+    "category": "Homem",
+    "price": 289,
+    "img": "/midia/imagens/produtos/colete-tampinhas.png",
+    "img2": "/midia/imagens/produtos/colete-tampinhas.png",
+    "tag": "Conceito",
+    "desc": "Colete aberto de inspiração experimental, composto por tampinhas metálicas conectadas. Uma peça conceitual para sobrepor ao look."
+  },
+  {
+    "id": 5,
+    "name": "Blazer com Mosaico de CDs",
+    "category": "Homem",
+    "price": 459,
+    "img": "/midia/imagens/produtos/blazer-cds.png",
+    "img2": "/midia/imagens/produtos/blazer-cds.png",
+    "tag": "Destaque",
+    "desc": "Blazer preto com aplicação de CDs inteiros e fragmentos espelhados nas costas, criando um mosaico de reflexos."
+  },
+  {
+    "id": 6,
+    "name": "Lustre Cascata de Lacres",
+    "category": "Decoração",
+    "price": 389,
+    "img": "/midia/imagens/produtos/lustre-lacres.png",
+    "img2": "/midia/imagens/produtos/lustre-lacres.png",
+    "tag": "Novo",
+    "desc": "Lustre decorativo em formato de cascata, com fileiras de lacres metálicos e estrutura suspensa. Lâmpada não inclusa."
+  },
+  {
+    "id": 7,
+    "name": "Sobreposição de Contas e Franjas",
+    "category": "Mulher",
+    "price": 219,
+    "img": "/midia/imagens/produtos/saia-contas.png",
+    "img2": "/midia/imagens/produtos/saia-contas.png",
+    "tag": "Artesanal",
+    "desc": "Sobreposição curta em trama de contas marrons, com desenhos em losango e franjas longas. A peça de base e os acessórios não acompanham."
+  },
+  {
+    "id": 8,
+    "name": "Corselet de Palha Trançada",
+    "category": "Mulher",
+    "price": 349,
+    "img": "/midia/imagens/produtos/corselet-palha.png",
+    "img2": "/midia/imagens/produtos/corselet-palha.png",
+    "tag": "Artesanal",
+    "desc": "Corselet de trama entrelaçada em tom natural, com detalhe circular no decote e acabamento de franjas na barra."
+  },
+  {
+    "id": 9,
+    "name": "Calça Patchwork de Tramas",
+    "category": "Homem",
+    "price": 399,
+    "img": "/midia/imagens/produtos/calca-patchwork.png",
+    "img2": "/midia/imagens/produtos/calca-patchwork.png",
+    "tag": "Destaque",
+    "desc": "Peça de cintura estruturada com painéis têxteis multicoloridos, tramas aparentes e franjas. O patchwork é o destaque da composição."
+  },
+  {
+    "id": 10,
+    "name": "Regata de Crochê Verde Bordada",
+    "category": "Homem",
+    "price": 279,
+    "img": "/midia/imagens/produtos/regata-verde.png",
+    "img2": "/midia/imagens/produtos/regata-verde.png",
+    "tag": "Novo",
+    "desc": "Regata verde em trama aberta de crochê, com aplicações coloridas de formas florais e geométricas. Parte de baixo não inclusa."
+  },
+  {
+    "id": 11,
+    "name": "Regata de Renda com Formas Orgânicas",
+    "category": "Homem",
+    "price": 259,
+    "img": "/midia/imagens/produtos/regata-renda.png",
+    "img2": "/midia/imagens/produtos/regata-renda.png",
+    "tag": "Artesanal",
+    "desc": "Regata clara de alças finas, com desenho vazado de curvas e círculos e barra irregular. Short não incluso."
+  },
+  {
+    "id": 12,
+    "name": "Bolsa Trançada Multicolorida",
+    "category": "Bolsas",
+    "price": 299,
+    "img": "/midia/imagens/produtos/bolsa-trancada.png",
+    "img2": "/midia/imagens/produtos/bolsa-trancada.png",
+    "tag": "Artesanal",
+    "desc": "Bolsa ampla com tiras têxteis multicoloridas entrelaçadas e alça larga. O valor corresponde apenas à bolsa; roupa e gorro não inclusos."
+  }
 ];
 
 export const brl = (n: number) =>
