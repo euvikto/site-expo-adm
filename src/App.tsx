@@ -254,9 +254,9 @@ function Runway() {
     return () => window.removeEventListener("scroll", f);
   }, []);
   return (
-    <section ref={ref} className="relative h-[90vh] overflow-hidden bg-ancora text-white">
-      <img src={IMG.runway1} alt="Desfile ARTMIS: modelo com vestido verde de trama entrelaçada" className="absolute inset-0 w-full h-[130%] object-cover opacity-60 mix-blend-luminosity" style={{ transform: `translateY(${y}px)` }} />
-      <div className="absolute inset-0 bg-gradient-to-t from-ancora-dark via-ancora/40 to-transparent" />
+    <section ref={ref} className="relative h-[90vh] overflow-hidden bg-neutral-800 text-white">
+      <img src={IMG.runway1} alt="Desfile ARTMIS: modelo com vestido verde de trama entrelaçada" className="absolute inset-0 w-full h-[130%] object-cover opacity-60 grayscale" style={{ transform: `translateY(${y}px)` }} />
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-800/40 to-transparent" />
       <div className="relative h-full flex flex-col items-center justify-center text-center px-6 reveal">
         <p className="text-[11px] tracking-[0.35em] uppercase">Desfile</p>
         <h2 className="font-serif text-5xl md:text-8xl mt-4">ARTMIS</h2>
@@ -309,8 +309,8 @@ function Editorial({ onCat }: { onCat: (c: string) => void }) {
     <section className="grid md:grid-cols-3 gap-4 px-5 md:px-10 pb-24">
       {[
         { img: "/midia/imagens/produtos/organizador-jeans.png", t: "Decoração Criativa", c: "Decoração" },
-        { img: "/midia/imagens/produtos/corselet-jeans.png", t: "Moda Reinventada", c: "Mulher" },
-        { img: "/midia/imagens/produtos/regata-verde.png", t: "Tramas & Texturas", c: "Homem" },
+        { img: "/midia/imagens/produtos/bolsa-folhagem.png", t: "Moda Reinventada", c: "Bolsas" },
+        { img: "/midia/imagens/artmis-tramas-texturas.png", t: "Tramas & Texturas", c: "Todos" },
       ].map((e, i) => (
         <button key={e.t} onClick={() => onCat(e.c)} className="relative aspect-[3/4] overflow-hidden group reveal" style={{ transitionDelay: `${i * 150}ms` }}>
           <img src={e.img} alt={e.t} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-[2s]" />
@@ -352,7 +352,7 @@ function About() {
           {[
             { title: "Origem natural", text: "Nossa proposta prioriza fibras como algodão orgânico e linho, além de estudar alternativas de origem biológica para tecidos e acabamentos." },
             { title: "Novos ciclos", text: "Imaginamos coleções que aproveitam retalhos, incorporam fibras recicladas e usam embalagens recicláveis, dando novos caminhos ao que já existe." },
-            { title: "Feita para ficar", text: "Design atemporal, produção em menor escala e incentivo ao cuidado, ao conserto e ao reuso: comprar com intenção e usar por mais tempo." },
+            { title: "Feita para ficar", text: "Design atemporal, produção em menor escala e incentivo ao cuidado, ao conserto e ao reuso: comprar com intenção e cuidar do meio ambiente. " },
           ].map((item) => (
             <div key={item.title}>
               <h3 className="font-serif text-3xl text-ancora">{item.title}</h3>
@@ -371,7 +371,7 @@ function Services() {
   const s = [
     { t: "Serviço de Agendamento", d: "Agende uma visita personalizada em uma de nossas boutiques." },
     { t: "Personalização", d: "Adicione suas iniciais em bolsas e acessórios selecionados." },
-    { t: "Embalagem ARTMIS", d: "Cada pedido é entregue na icônica caixa bordô ARTMIS." },
+    { t: "Nossa identificação", d: "Cada pedido é entregue com nossas etiquetas sustentáveis." },
   ];
   return (
     <section className="grid md:grid-cols-3 border-t border-neutral-200">
@@ -509,7 +509,7 @@ function Footer() {
   const cols = [
     { t: "Posso ajudar?", l: ["Fale Conosco", "Perguntas Frequentes", "Trocas e Devoluções", "Rastrear Pedido"] },
     { t: "A Empresa", l: ["Sobre a ARTMIS", "ARTMIS Ancora", "Sustentabilidade", "Carreiras"] },
-    { t: "Lojas", l: ["São Paulo — Oscar Freire", "Rio de Janeiro — Leblon", "Milão — Via Montenapoleone", "Encontrar Loja"] },
+    { t: "Lojas", l: ["Campo Grande - Rio de Janeiro", "Copacabana - Rio de Janeiro", "Urca - Rio de Janeiro", "Recreio dos Bandeirantes - Rio de Janeiro"] },
   ];
   return (
     <footer id="contato" className="bg-ancora text-white">

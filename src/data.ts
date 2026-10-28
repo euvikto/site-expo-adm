@@ -49,13 +49,13 @@ export const products: Product[] = [
   },
   {
     "id": 3,
-    "name": "Corselet Jeans com Flores",
-    "category": "Mulher",
-    "price": 329,
-    "img": "/midia/imagens/produtos/corselet-jeans.png",
-    "img2": "/midia/imagens/produtos/corselet-jeans.png",
+    "name": "Bolsa Escultural Folhagem",
+    "category": "Bolsas",
+    "price": 349,
+    "img": "/midia/imagens/produtos/bolsa-folhagem.png",
+    "img2": "/midia/imagens/produtos/bolsa-folhagem.png",
     "tag": "Destaque",
-    "desc": "Corselet tomara que caia em patchwork de jeans, com barra em ponta e aplicações florais em diferentes tons de azul."
+    "desc": "Bolsa de mão verde com formato de leque, textura de folhas sobrepostas e alça curta integrada. O valor corresponde apenas à bolsa; roupa e acessórios não inclusos."
   },
   {
     "id": 4,
