@@ -49,13 +49,13 @@ export const products: Product[] = [
   },
   {
     "id": 3,
-    "name": "Bolsa Escultural Folhagem",
-    "category": "Bolsas",
-    "price": 349,
-    "img": "/midia/imagens/produtos/bolsa-folhagem.png",
-    "img2": "/midia/imagens/produtos/bolsa-folhagem.png",
+    "name": "Corselet Jeans com Flores",
+    "category": "Mulher",
+    "price": 329,
+    "img": "/midia/imagens/produtos/corselet-jeans.png",
+    "img2": "/midia/imagens/produtos/corselet-jeans.png",
     "tag": "Destaque",
-    "desc": "Bolsa de mão verde com formato de leque, textura de folhas sobrepostas e alça curta integrada. O valor corresponde apenas à bolsa; roupa e acessórios não inclusos."
+    "desc": "Corselet tomara que caia em patchwork de jeans, com barra em ponta e aplicações florais em diferentes tons de azul."
   },
   {
     "id": 4,
@@ -79,13 +79,13 @@ export const products: Product[] = [
   },
   {
     "id": 6,
-    "name": "Organizador de Parede em Jeans",
+    "name": "Lustre Cascata de Lacres",
     "category": "Decoração",
     "price": 389,
-    "img": "/midia/imagens/produtos/organizador-jeans.png",
-    "img2": "/midia/imagens/produtos/organizador-jeans.png",
+    "img": "/midia/imagens/produtos/lustre-lacres.png",
+    "img2": "/midia/imagens/produtos/lustre-lacres.png",
     "tag": "Novo",
-    "desc": "Organizador de parede com bolso de jeans e moldura de madeira, para guardar pequenos objetos e apoiar óculos. Chaves, óculos e demais acessórios da foto não inclusos."
+    "desc": "Lustre decorativo em formato de cascata, com fileiras de lacres metálicos e estrutura suspensa. Lâmpada não inclusa."
   },
   {
     "id": 7,
