@@ -308,12 +308,12 @@ function Editorial({ onCat }: { onCat: (c: string) => void }) {
   return (
     <section className="grid md:grid-cols-3 gap-4 px-5 md:px-10 pb-24">
       {[
-        { img: IMG.bags, t: "Bolsas Ícone", c: "Bolsas" },
-        { img: IMG.story, t: "Noite ARTMIS", c: "Mulher" },
-        { img: IMG.menB, t: "Alfaiataria", c: "Homem" },
+        { img: "/midia/imagens/produtos/lustre-lacres.png", t: "Decoração Criativa", c: "Decoração" },
+        { img: "/midia/imagens/produtos/corselet-jeans.png", t: "Moda Reinventada", c: "Mulher" },
+        { img: "/midia/imagens/produtos/regata-verde.png", t: "Tramas & Texturas", c: "Homem" },
       ].map((e, i) => (
         <button key={e.t} onClick={() => onCat(e.c)} className="relative aspect-[3/4] overflow-hidden group reveal" style={{ transitionDelay: `${i * 150}ms` }}>
-          <img src={e.img} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-[2s]" />
+          <img src={e.img} alt={e.t} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-[2s]" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute bottom-8 inset-x-0 text-center text-white">
             <h3 className="font-serif text-3xl">{e.t}</h3>
