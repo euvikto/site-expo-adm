@@ -145,7 +145,7 @@ function Hero() {
       <div className="absolute bottom-16 inset-x-0 text-center text-white px-6 fade-up">
         <p className="text-[11px] tracking-[0.35em] uppercase mb-4">Primavera-Verão 2026</p>
         <h1 className="font-serif text-5xl md:text-7xl">ARTMIS</h1>
-        <p className="mt-4 max-w-md mx-auto text-sm text-white/80">Elegância que nasce do cuidado. Conheça a proposta ARTMIS de moda consciente, inspirada na natureza e feita para durar.</p>
+        <p className="mt-4 max-w-md mx-auto text-sm text-white/80">Moda que nasce do cuidado. Conheça a proposta ARTMIS de moda consciente, inspirada na natureza e feita para durar.</p>
         <a href="#loja" className="inline-block mt-8 bg-white text-black px-10 py-4 text-[11px] tracking-[0.25em] uppercase hover:bg-ancora hover:text-white transition-colors duration-500">Descubra Agora</a>
       </div>
       <button onClick={toggle} className="absolute bottom-6 right-6 text-white w-10 h-10 border border-white/50 rounded-full grid place-items-center hover:bg-white hover:text-black transition">
